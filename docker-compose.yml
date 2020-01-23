@@ -1,0 +1,33 @@
+version: '2'
+services:
+  hc:
+    restart: unless-stopped
+    image: conceptant/healthy-citizen-widgets:latest
+    ports:
+      - 8080:8000
+    volumes:
+      - /data/logs:/var/logs/hc
+      - /data/www:/adp-backend-v5/model/public
+    environment:
+      - APP_SERVER_URL="https://hc.preprod.fda.gov"
+      - DB_SERVER=db
+      - EPIC_CLIENT_ID="specify-for-each-installation"
+      - APP_ID="specify-for-each-installation"
+      - DEFAULT_HC_ALGORITHM="openfda"
+      - REDIS_URL="redis://redis:6379"
+    links:
+      - db
+      - redis
+  db:
+    restart: unless-stopped
+    image: mongo:4.2
+    command: --noIndexBuildRetry --setParameter diagnosticDataCollectionEnabled=false --setParameter maxIndexBuildMemoryUsageMegabytes=20000 --setParameter failIndexKeyTooLong=false --setParameter cursorTimeoutMillis=6000000 --setParameter internalQueryExecMaxBlockingSortBytes=2147483647
+    ports:
+      - "27017"
+    volumes:
+      - /data/db:/data/db
+  redis:
+    restart: unless-stopped
+    image: redis:5.0
+    ports:
+      - "6379"
