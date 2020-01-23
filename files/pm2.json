@@ -1,0 +1,17 @@
+{
+  "apps": [
+    {
+      "name": "hc",
+      "script": "app.js",
+      "watch": false,
+      "cwd": "/adp-backend-v5",
+      "env": {
+      },
+      "exec_mode": "cluster_mode",
+      "merge_logs": true,
+      "instances": 4,
+      "error_file": "/var/log/hc/error.log",
+      "out_file": "/var/log/hc/output.log"
+    }
+  ]
+}
