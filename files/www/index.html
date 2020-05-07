@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title -->
+    <title>Healthy Citizen Widget Store</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|PT+Sans|Merriweather">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/icon-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/icon-line-pro/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets/vendor/icon-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/icon-hs/style.css">
+    <link rel="stylesheet" href="assets/vendor/hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" href="assets/vendor/dzsparallaxer/dzsparallaxer.css">
+    <link rel="stylesheet" href="assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+    <link rel="stylesheet" href="assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+    <link rel="stylesheet" href="assets/vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="assets/vendor/cubeportfolio-full/cubeportfolio/css/cubeportfolio.min.css">
+    <link rel="stylesheet" href="assets/vendor/fancybox/jquery.fancybox.css">
+
+    <!-- CSS Template -->
+    <link rel="stylesheet" href="assets/css/styles.op-consulting.css">
+
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/css/settings.css">
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/css/layers.css">
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution/css/navigation.css">
+    <link rel="stylesheet" href="assets/vendor/revolution-slider/revolution-addons/typewriter/css/typewriter.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <script>
+      var widgetCodeTemplate = '<script src="http://hc.preprod.fda.gov:8000/public/hc-widget-loader.js"\n'+
+              ' data-algorithm="openfda"\n'+
+              ' data-font-style="none"\n'+
+              ' data-font-face="Arial"\n'+
+              ' data-font-size="12"\n'+
+              ' data-udid="aa27c71e-30c8-4ceb-8c1c-5641e066c0aa"\n'+
+              ' data-data-source="inline"\n'+
+              ' data-drugs="68071199003,00115171113,00777310502,57237021101,68788004803,52244044910,67457060130,68382079101,68382009305,16729018201,47781042347,64764024060"\n'+
+              ' data-wm="false"\n'+
+              ' data-type="%type%"\n'+
+              ' hc-widget="true"\n'+
+              ' data-widget-id="recalls-widget-1"/>';
+      var widgetsCode = {};
+      var widgetsTypes = ['adverseEvents', 'recalls', 'drugsVisualization', 'drugInteraction', 'graphViewWidget', 'ndcLookup', 'preferences', 'questionnaire','ucsfRecalls'];
+      for (var i in widgetsTypes) {
+        widgetsCode[widgetsTypes[i]] = widgetCodeTemplate.replace( '%type%', widgetsTypes[i] );
+      }
+    </script>
+  </head>
+
+  <body id="home-section">
+    <main>
+      <!-- Header -->
+      <header id="js-header" class="u-header u-header--sticky-top u-header--change-appearance u-header--change-logo"
+              data-header-fix-moment="0">
+        <div class="u-header__section g-bg-black-opacity-0_2 g-transition-0_3 g-py-7 g-py-23--md"
+             data-header-fix-moment-exclude="g-bg-black-opacity-0_5 g-py-23--md"
+             data-header-fix-moment-classes="u-shadow-v19 g-bg-white g-py-15--md">
+          <nav class="navbar navbar-expand-lg g-py-0">
+            <div class="container g-pos-rel">
+              <!-- Logo -->
+              <a href="#!" class="js-go-to navbar-brand u-header__logo"
+                 data-type="static">
+                <img class="u-header__logo-img u-header__logo-img--main g-width-90" src="assets/img/hc-logo-65.png" alt="Healthy Citizen Logo">
+                <img class="u-header__logo-img g-width-90" src="assets/img/hc-logo-65.png" alt="Healthy Citizen Logo">
+              </a>
+              <!-- End Logo -->
+
+              <!-- Navigation -->
+              <div class="collapse navbar-collapse align-items-center flex-sm-row" id="navBar" data-mobile-scroll-hide="true">
+                <ul id="js-scroll-nav" class="navbar-nav text-uppercase g-letter-spacing-1 g-font-size-12 g-pt-20 g-pt-0--lg ml-auto">
+                  <li class="nav-item g-mr-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#home-section" class="nav-link p-0">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#disclaimer-section" class="nav-link p-0">Disclaimer</a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#about-section" class="nav-link p-0">About</a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#portfolio-section" class="nav-link p-0">Widgets</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
+
+              <!-- Responsive Toggle Button -->
+              <button class="navbar-toggler btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-3 g-right-0" type="button"
+                      aria-label="Toggle navigation"
+                      aria-expanded="false"
+                      aria-controls="navBar"
+                      data-toggle="collapse"
+                      data-target="#navBar">
+                <span class="hamburger hamburger--slider">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </span>
+              </button>
+              <!-- End Responsive Toggle Button -->
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Revolution Slider -->
+      <div class="g-overflow-hidden">
+        <div id="rev_slider_1014_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="typewriter-effect" data-source="gallery" style="background-color:transparent;padding:0px;">
+          <!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
+          <div id="rev_slider_1014_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
+            <ul>  <!-- SLIDE  -->
+              <li data-index="rs-2800" data-transition="curtain-1" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="assets/img/widget-store.png" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                <!-- MAIN IMAGE -->
+                <img src="assets/img/widget-store.png" alt="" data-bgposition="center center" data-bgfit="cover" class="rev-slidebg">
+                <!-- LAYERS -->
+
+                <!-- LAYER NR. 1 -->
+                <div class="tp-caption tp-shape tp-shapewrapper "
+                     id="slide-2800-layer-7"
+                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                     data-width="full"
+                     data-height="full"
+                     data-whitespace="nowrap"
+
+                     data-type="shape"
+                     data-basealign="slide"
+                     data-responsive_offset="off"
+                     data-responsive="off"
+                     data-frames='[{"from":"opacity:0;","speed":500,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},{"speed":5000,"to":"opacity:0;","ease":"Power4.easeInOut"}]'
+                     data-textAlign="['left','left','left','left']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+
+                     style="z-index: 5;background-color:rgba(0, 0, 0, 0.3);border-color:rgba(0, 0, 0, 0);border-width:0px;"></div>
+
+                <!-- LAYER NR. 2 -->
+                <div class="tp-caption   tp-resizeme rs-parallaxlevel-4"
+                     id="slide-2800-layer-1"
+                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                     data-y="['middle','middle','middle','middle']" data-voffset="['-100','-100','-100','-100']"
+                     data-fontsize="['37','34','25','30']"
+                     data-lineheight="['37','34','25','30']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+
+                     data-type="text"
+                     data-responsive_offset="on"
+
+                     data-frames='[{"from":"y:50px;sX:1;sY:1;opacity:0;","speed":2500,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+                     data-textAlign="['center','center','center','center']"
+                     data-paddingtop="[20,20,20,20]"
+                     data-paddingright="[40,40,40,40]"
+                     data-paddingbottom="[20,20,20,20]"
+                     data-paddingleft="[40,40,40,40]"
+
+                     style="z-index: 6; white-space: nowrap; color: rgba(255, 255, 255, 1.00);">
+                     <!-- <i class="g-hidden-sm-down g-font-size-20 g-pos-rel g-top-minus-5 mr-2 icon-media-119 u-line-icon-pro"></i> -->
+                     HEALTHY CITIZEN WIDGET STORE
+                     <!-- <i class="g-hidden-sm-down g-font-size-20 g-pos-rel g-top-minus-5 ml-2 icon-media-119 u-line-icon-pro"></i> -->
+                </div>
+
+                <!-- LAYER NR. 4 -->
+                <div class="tp-caption   tp-resizeme rs-parallaxlevel-4"
+                     id="slide-2800-layer-2"
+                     data-x="['center','center','center','center']" data-hoffset="['-10','-10','-10','-10']"
+                     data-y="['middle','middle','middle','middle']" data-voffset="['50','50','50','50']"
+                     data-fontsize="['27','27','25','30']"
+                     data-lineheight="['40','40','35','40']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+
+                     data-type="text"
+                     data-responsive_offset="on"
+
+                     data-frames='[{"from":"y:50px;sX:1;sY:1;opacity:0;","speed":2500,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+                     data-textAlign="['center','center','center','center']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[0,0,0,0]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[0,0,0,0]"
+
+                     style="z-index: 8; white-space: nowrap; font-weight: 400; color: rgba(255, 255, 255, 1.00);border-width:0px;">
+                     Providing public with reliable FDA information
+                </div>
+
+                <!-- LAYER NR. 5 -->
+                <div class="tp-caption rev-btn  tp-resizeme rs-parallaxlevel-4"
+                     id="slide-2800-layer-4"
+                     data-x="['left','left','center','center']" data-hoffset="['530','525','105','100']"
+                     data-y="['middle','middle','middle','middle']" data-voffset="['240','240','240','240']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+
+                     data-type="button"
+                     data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+                     data-responsive_offset="on"
+
+                     data-frames='[{"from":"x:-50px;opacity:0;","speed":2500,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"150","ease":"Power2.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 0);bw:2px 2px 2px 2px;"}]'
+                     data-textAlign="['left','left','left','left']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[50,50,50,50]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[50,50,50,50]"
+
+                     style="z-index: 9; white-space: nowrap; font-size: 15px; line-height: 46px; color: rgba(255, 255, 255, 1.00);background-color:rgba(0, 0, 0, 0);border-color:rgba(255, 255, 255, 1);border-style:solid;border-width:2px;border-radius:30px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Learn More
+                </div>
+
+                <!-- LAYER NR. 7
+                <div class="tp-caption rev-btn  tp-resizeme rs-parallaxlevel-4"
+                     href="#portfolio-section" target="_self" id="slide-2800-layer-5"
+                     data-x="['left','left','center','center']" data-hoffset="['630','525','105','100']"
+                     data-y="['middle','middle','middle','middle']" data-voffset="['240','240','240','240']"
+                     data-width="none"
+                     data-height="none"
+                     data-whitespace="nowrap"
+
+                     data-type="button"
+                     data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":""}]'
+                     data-responsive_offset="on"
+
+                     data-frames='[{"from":"x:50px;opacity:0;","speed":2500,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"},{"frame":"hover","speed":"150","ease":"Power2.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 0);bw:2px 2px 2px 2px;"}]'
+                     data-textAlign="['left','left','left','left']"
+                     data-paddingtop="[0,0,0,0]"
+                     data-paddingright="[50,50,50,50]"
+                     data-paddingbottom="[0,0,0,0]"
+                     data-paddingleft="[50,50,50,50]"
+
+                     style="z-index: 9; white-space: nowrap; font-size: 15px; line-height: 46px; color: rgba(255, 255, 255, 1.00);background-color:rgba(0, 0, 0, 0);border-color:rgba(255, 255, 255, 1);border-style:solid;border-width:2px;border-radius:30px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Our Widgets
+                </div>
+                -->
+              </li>
+            </ul>
+            <div class="tp-bannertimer" style="height: 2px; background-color: rgba(255, 255, 255, .5);"></div> </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Revolution Slider -->
+
+      <div id="disclaimer-section" class="g-overflow-hidden g-py-50">
+        <div class="container">
+          <!-- Heading -->
+          <div class="mx-auto text-center"> <!-- g-max-width-550 text-center  -->
+            <h2 class="h3 mb-5">Healthy Citizen Disclaimer</h2>
+          </div>
+          <div class="mx-auto">
+            <p class="g-font-size-16">Do not rely on Healthy Citizen to make decisions regarding your medical care. Always share this information with and consult with your healthcare practitioner about the potential risks and benefits of using any FDA-regulated products. Specifically,</p>
+            <ul>
+              <li><p class="g-font-size-16">Patients should never stop or change medication without first consulting with your healthcare practitioner.</p></li>
+              <li><p class="g-font-size-16">Health Citizen consolidates information from several trusted government data sources and each data source has its own update frequency. Healthy Citizen provides you the most current data available from each trusted source.</p></li>
+            </ul>
+            <p class="g-font-size-16">Healthy Citizen delivers you trusted information on the FDA regulated products that you use to enable you to make better and informed decisions about your health in conjunction with your health practitioners.</p>
+          </div>
+          <!-- End Heading -->
+        </div>
+      </div>
+
+      <!-- About -->
+      <div id="about-section" class="g-overflow-hidden">
+        <div class="container g-pt-100">
+          <!-- Heading -->
+          <div class="mx-auto text-center"> <!-- g-max-width-550 text-center  -->
+            <h2 class="h3 mb-4">WHAT ARE HEALTHY CITIZEN WIDGETS?</h2>
+          </div>
+          <div class="mx-auto"> <!-- g-max-width-550 text-center  -->
+            <p class="g-font-size-16">The vast amount of public information on government websites can be hard to digest. Healthy Citizen widgets were designed to address this challenge. By harnessing the data on government health sites--especially those hosted by FDA—Healthy Citizen gives you current, targeted, and trusted health information on approved FDA-regulated products.</p>
+            <p class="g-font-size-16">Whether you’re a patient, caregiver, healthcare practitioner, or researcher – Healthy Citizen makes it easier for you to improve health outcomes. With Healthy Citizen, patients and caregivers can access information on recalls, potential negative side effects, and potential drug-to-drug interactions related to approved FDA-regulated products. The widgets can present data in dynamic tables, intuitive graphs and/or interactive visualizations. Patients and caregivers can use this information when speaking with their healthcare practitioner to facilitate the shared decision-making process, leading to more informed health choices.. </p>
+            <p class="g-font-size-16">Healthy Citizen delivers you trusted FDA information on regulated products and supports FDA’s goal of empowering consumers to make better and more informed decisions about their health.</p>
+          </div>
+          <!-- End Heading -->
+
+          <!-- two-column col 1 -->
+          <ul class="row list-inline g-py-30 mb-0">
+            <li class="col-md-6 list-inline-item g-mx-0 g-mb-30">
+              <div class="text-center two-col-1"> <!-- g-max-width-550 text-center  -->
+                <h2 class="h3 mb-4">WHAT IS A WIDGET?<br>&nbsp;<br></h2>
+                <p class="g-font-size-16">A widget is a relatively simple and small
+                  piece of software code that can be installed
+                  into web portal. The Healthy Citizen Widgets
+                  pull publicly available FDA information
+                  and present the information in an
+                  easily understandable manner.</p>
+              </div>
+            </li>
+            <!-- two-column col 2 -->
+            <li class="col-md-6 list-inline-item g-mx-0 g-mb-30">
+              <div class="text-center two-col-2"> <!-- g-max-width-550 text-center  -->
+                <h2 class="h3 mb-4">HOW DO I GET ACCESS TO THESE WIDGETS?</h2>
+                <p class="g-font-size-16">Contact your healthcare practitioner or
+                  patient advocacy group and ask about
+                  adding the Healthy Citizen Widgets to
+                  their web portal. This information is
+                  valuable to healthcare practitioners
+                  and their patients.</p>
+              </div>
+            </li>
+          </ul>
+          <!-- eo two-column -->
+        </div>
+      </div>
+      <!-- End About -->
+
+      <!-- Cube Portfolio Blocks - Content -->
+      <div id="portfolio-section" class="container g-pb-50">
+        <!-- Heading -->
+        <div class="g-max-width-550 text-center mx-auto g-mb-50">
+          <!-- <h2 class="text-uppercase g-color-main-light-v1 g-font-weight-600 g-font-size-13 g-letter-spacing-2 mb-4">We've Done some Amazing Jobs</h2> -->
+          <h2 class="h3 mb-4">Healthy Citizen Widgets Currently Available</h2>
+        </div>
+        <!-- End Heading -->
+
+        <div class="cbp g-mb-50"
+             data-controls="#filterControls"
+             data-animation="quicksand"
+             data-x-gap="30"
+             data-y-gap="30"
+             data-media-queries='[
+               {"width": 1500, "cols": 3},
+               {"width": 1100, "cols": 3},
+               {"width": 800, "cols": 3},
+               {"width": 480, "cols": 2},
+               {"width": 300, "cols": 1}
+             ]'>
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item tabular">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img/adverse-events-widget.png" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" onclick="alert(widgetsCode['adverseEvents'])">
+                      <i class="icon-communication-130 u-line-icon-pro" title="Begin integrating this widget"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img/adverse-events-widget-text.png">
+                      <i class="icon-communication-007 u-line-icon-pro" title="Learn more about this widget"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Adverse Event</h3>
+              <p class="mb-0">The Adverse Event Widget will display negative side effects for FDA regulated products in a table&nbsp;format.</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item tabular">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img/recalls-widget.png" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" onclick="alert(widgetsCode['recalls'])">
+                      <i class="icon-communication-130 u-line-icon-pro" title="Begin integrating this widget"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img/recalls-widget-text.png">
+                      <i class="icon-communication-007 u-line-icon-pro" title="Learn more about this widget"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Recalls</h3>
+              <p class="mb-0">The Recall Widget will display recalls for FDA regulated products in a table&nbsp;format.</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item visual">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img/drugs-interaction-visualization-widget.png" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" onclick="alert(widgetsCode['drugsVisualization'])">
+                      <i class="icon-communication-130 u-line-icon-pro" title="Begin integrating this widget"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img/drugs-interaction-visualization-widget-text.png">
+                      <i class="icon-communication-007 u-line-icon-pro" title="Learn more about this widget"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Drug Visualization</h3>
+              <p class="mb-0">The Drug Interactions Visualization provides a user with a visual representation of the medications that interact with each&nbsp;other. </p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item visual">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img/drug-interaction-widget.png" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" onclick="alert(widgetsCode['drugInteraction'])">
+                      <i class="icon-communication-130 u-line-icon-pro" title="Begin integrating this widget"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img/drug-interaction-widget-text.png">
+                      <i class="icon-communication-007 u-line-icon-pro" title="Learn more about this widget"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Drug Interactions</h3>
+              <p class="mb-0">The Potential Drug Interactions table view provides a user with a tabular list of the medications that interact with each&nbsp;other.</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item visual tabular">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img/side-effects-widget.png" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" onclick="alert(widgetsCode['graphViewWidget'])">
+                      <i class="icon-communication-130 u-line-icon-pro" title="Begin integrating this widget"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img/side-effects-widget-text.png">
+                      <i class="icon-communication-007 u-line-icon-pro" title="Learn more about this widget"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Potential Side Effects</h3>
+              <p class="mb-0">The Potential Drug Interactions table view provides a user with a tabular list of the medications that interact with each&nbsp;other.</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item other">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img/ndc-lookup-widget.png" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" onclick="alert(widgetsCode['ndcLookup'])">
+                      <i class="icon-communication-130 u-line-icon-pro" title="Begin integrating this widget"></i> <!-- was 095 - link -->
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img/ndc-lookup-widget-text.png">
+                      <i class="icon-communication-007 u-line-icon-pro" title="Learn more about this widget"></i> <!-- was 017 - picture -->
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">NDC Look-Up</h3>
+              <p class="mb-0">The NDC Look-Up Widget allows the user to look-up medications, based upon the medication name or National Drug&nbsp;Code&nbsp;(NDC).</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+
+          <!-- Questionnaire widget is disabled for now?
+          <div class="cbp-item other">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img-temp/500x335/img6.jpg" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="#!">
+                      <i class="icon-communication-130 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img-temp/500x335/img6.jpg">
+                      <i class="icon-communication-007 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">Questionnaire</h3>
+              <p class="mb-0">The questionnaire widget provides an easy-to-use way to conduct questionnaires among your users.</p>
+            </div>
+          </div>
+          End Cube Portfolio Blocks - Item -->
+
+          <!-- Cube Portfolio Blocks - Item -->
+          <div class="cbp-item other">
+            <div class="u-block-hover g-parent">
+              <img class="img-fluid g-transform-scale-1_1--parent-hover g-transition-0_5 g-transition--ease-in-out" src="assets/img/user-preferences-widget.png" alt="Image description">
+              <div class="d-flex w-100 h-100 g-bg-primary-opacity-0_6 opacity-0 g-opacity-1--parent-hover g-pos-abs g-top-0 g-left-0 g-transition-0_3 g-transition--ease-in u-block-hover__additional--fade u-block-hover__additional--fade-in g-pa-20">
+                <ul class="align-items-end flex-column list-inline mt-auto ml-auto mb-0">
+                  <li class="list-inline-item">
+                    <a class="u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" onclick="alert(widgetsCode['preferences'])">
+                      <i class="icon-communication-130 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="assets/img/user-preferences-widget-text.png">
+                      <i class="icon-communication-007 u-line-icon-pro"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-center g-pa-25 mb-1">
+              <h3 class="h5 g-font-weight-600 mb-1">User Preferences</h3>
+              <p class="mb-0">The User Preferences widget allows users to pre-select the lists of drugs they are interested in learning&nbsp;about.</p>
+            </div>
+          </div>
+          <!-- End Cube Portfolio Blocks - Item -->
+        </div>
+      </div>
+
+      <!-- Getting Started -->
+      <!-- Heading -->
+      <div id="install-section" class="container g-pb-50">
+
+        <div id="install-section" class="g-overflow-hidden">
+          <div class="mx-auto text-center"> <!-- g-max-width-550 text-center  -->
+            <h2 class="h3 mb-4">GETTING STARTED</h2>
+          </div>
+          <div class="mx-auto"> <!-- g-max-width-550 text-center  -->
+            <p class="g-font-size-16">It is easy to integrate the Healthy Citizen Widgets into your existing portal or web solution for use by your patients, clients and/or members. The three steps below outlines what your technical team needs to do to allow your organization to leverage  the widgets of chose. When logged into the Widget Manager platform more detailed instructions will be given on how to:</p>
+            <ul>
+              <li class="g-font-size-16">Explore the widgets and their capabilities to help you decide which widgets are the best fit for your organization and user population(s).</li>
+              <li class="g-font-size-16">Configuring the widgets for your organization.</li>
+              <li class="g-font-size-16">Install the required code snippets into your site to finish the implementation.</li>
+            </ul>
+            <p class="g-font-size-16">Once this is complete, your users will be able to access the trusted, timely, and personalized health data that the Healthy Citizen Widgets provide. </p>
+          </div>
+        </div>
+        <!-- End Heading -->
+
+        <div class="g-overflow-hidden">
+          <div class="container g-pb-50">
+
+            <!-- Icon Blocks -->
+            <ul class="row list-inline u-info-v9-1 g-pb-70 mb-0 lisa">
+              <li class="col-md-4 list-inline-item g-mx-0 g-mb-30">
+                <!-- Icon Blocks -->
+                <div class="u-block-hover text-center g-px-40">
+                  <div class="g-mb-5">
+                        <span class="u-icon-v1 g-width-85 g-height-85 g-color-main g-font-size-50 rounded-circle">
+                          <i class="icon-hotel-restaurant-002 u-line-icon-pro"></i>
+                        </span>
+                  </div>
+                  <div class="g-mb-25">
+                        <span class="u-icon-v2 u-shadow-v22 g-width-25 g-height-25 g-color-primary g-bg-white g-font-size-9 rounded-circle">
+                          <i class="fa fa-check"></i>
+                        </span>
+                  </div>
+                  <h3 class="g-color-primary g-font-weight-600 g-font-size-17 text-uppercase mb-3">
+                    <span class="g-color-main g-font-weight-700">01.</span>
+                    Register
+                  </h3>
+                  <a>Create your secure account on <a href="http://widget-manager.healthycitizen.org">http://widget-manager.healthycitizen.org</a> - one centralized place where you can manage all your Healthy Citizen Widgets.</p>
+                </div>
+                <!-- End Icon Blocks -->
+              </li>
+
+              <li class="col-md-4 list-inline-item g-mx-0 g-mb-30">
+                <!-- Icon Blocks -->
+                <div class="u-block-hover text-center g-px-40">
+                  <div class="g-mb-5">
+                        <span class="u-icon-v1 g-width-85 g-height-85 g-color-main g-font-size-50 rounded-circle">
+                          <i class="icon-education-073 u-line-icon-pro"></i>
+                        </span>
+                  </div>
+                  <div class="g-mb-25">
+                        <span class="u-icon-v2 u-shadow-v22 g-width-25 g-height-25 g-color-primary g-bg-white g-font-size-9 rounded-circle"> <!-- g-color-white g-bg-primary -->
+                          <i class="fa fa-check"></i>
+                        </span>
+                  </div>
+                  <h3 class="g-color-primary g-font-weight-600 g-font-size-17 text-uppercase mb-3">
+                    <span class="g-color-main g-font-weight-700">02.</span>
+                    Configure
+                  </h3>
+                  <p>Configure your widget presentation, including the type, color schema, and FHIR Integration parameters.</p>
+                </div>
+                <!-- End Icon Blocks -->
+              </li>
+
+              <li class="col-md-4 list-inline-item g-mx-0 g-mb-30">
+                <!-- Icon Blocks -->
+                <div class="u-block-hover text-center g-px-40">
+                  <div class="g-mb-5">
+                        <span class="u-icon-v1 g-width-85 g-height-85 g-color-main g-font-size-50 rounded-circle">
+                          <i class="icon-communication-130 u-line-icon-pro"></i>
+                        </span>
+                  </div>
+                  <div class="g-mb-25">
+                        <span class="u-icon-v2 u-shadow-v22 g-width-25 g-height-25 g-color-primary g-bg-white g-font-size-9 rounded-circle">
+                          <i class="fa fa-check"></i>
+                        </span>
+                  </div>
+                  <h3 class="g-color-primary g-font-weight-600 g-font-size-17 text-uppercase mb-3">
+                    <span class="g-color-main g-font-weight-700">03.</span>
+                    Embed
+                  </h3>
+                  <p>Grab the widget code snippet and paste it on your website for your existing users to benefit from being up-to-date with the tailored latest FDA information.</p>
+                </div>
+                <!-- End Icon Blocks -->
+              </li>
+            </ul>
+            <!-- End Icon Blocks -->
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+
+    <!-- JS Global Compulsory -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="assets/vendor/popper.min.js"></script>
+    <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+    <!-- JS Implementing Plugins -->
+    <script src="assets/vendor/appear.js"></script>
+    <script src="assets/vendor/slick-carousel/slick/slick.js"></script>
+    <script src="assets/vendor/cubeportfolio-full/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+    <script src="assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+    <script src="assets/vendor/dzsparallaxer/dzsscroller/scroller.js"></script>
+    <script src="assets/vendor/dzsparallaxer/advancedscroller/plugin.js"></script>
+    <script src="assets/vendor/fancybox/jquery.fancybox.js"></script>
+
+    <!-- JS Unify -->
+    <script src="assets/js/hs.core.js"></script>
+    <script src="assets/js/components/hs.header.js"></script>
+    <script src="assets/js/helpers/hs.hamburgers.js"></script>
+    <script src="assets/js/components/hs.scroll-nav.js"></script>
+    <script src="assets/js/components/hs.counter.js"></script>
+    <script src="assets/js/components/hs.carousel.js"></script>
+    <script src="assets/js/components/hs.cubeportfolio.js"></script>
+    <script src="assets/js/components/hs.popup.js"></script>
+    <script src="assets/js/components/hs.go-to.js"></script>
+
+    <!-- JS Revolution Slider -->
+    <script src="assets/vendor/revolution-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/vendor/revolution-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="assets/vendor/revolution-slider/revolution-addons/typewriter/js/revolution.addon.typewriter.min.js"></script>
+
+    <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+    <!-- JS Customization -->
+    <script src="assets/js/custom.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // initialization of carousel
+        $.HSCore.components.HSCarousel.init('.js-carousel');
+
+        // initialization of header
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+        // initialization of go to section
+        $.HSCore.components.HSGoTo.init('.js-go-to');
+
+        // initialization of counters
+        var counters = $.HSCore.components.HSCounter.init('[class*="js-counter"]');
+
+        // initialization of popups
+        $.HSCore.components.HSPopup.init('.js-fancybox');
+      });
+
+      $(window).on('load', function() {
+        // initialization of HSScrollNav
+        $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
+          duration: 700
+        });
+
+        // initialization of cubeportfolio
+        $.HSCore.components.HSCubeportfolio.init('.cbp');
+      });
+
+      var tpj = jQuery;
+
+      var revapi1014;
+      tpj(document).ready(function () {
+        if (tpj("#rev_slider_1014_1").revolution == undefined) {
+          revslider_showDoubleJqueryError("#rev_slider_1014_1");
+        } else {
+          revapi1014 = tpj("#rev_slider_1014_1").show().revolution({
+            sliderType: "standard",
+            jsFileLocation: "revolution/js/",
+            sliderLayout: "fullscreen",
+            dottedOverlay: "none",
+            delay: 9000,
+            navigation: {
+              keyboardNavigation: "off",
+              keyboard_direction: "horizontal",
+              mouseScrollNavigation: "off",
+              mouseScrollReverse: "default",
+              onHoverStop: "off",
+              touch: {
+                touchenabled: "on",
+                swipe_threshold: 75,
+                swipe_min_touches: 1,
+                swipe_direction: "horizontal",
+                drag_block_vertical: false
+              },
+              arrows: {
+                style: "hermes",
+                enable: true,
+                hide_onmobile: true,
+                hide_under: 768,
+                hide_onleave: false,
+                tmp: '<div class="tp-arr-allwrapper"><div class="tp-arr-imgholder"></div><div class="tp-arr-titleholder">{{title}}</div></div>',
+                left: {
+                  h_align: "left",
+                  v_align: "center",
+                  h_offset: 0,
+                  v_offset: 0
+                },
+                right: {
+                  h_align: "right",
+                  v_align: "center",
+                  h_offset: 0,
+                  v_offset: 0
+                }
+              }
+            },
+            responsiveLevels:[1240,1024,778,778],
+            gridwidth:[1240,1024,778,480],
+            gridheight:[600,500,400,300],
+            lazyType: 'smart',
+            scrolleffect: {
+              fade: "on",
+              grayscale: "on",
+              on_slidebg: "on",
+              on_parallax_layers: "on",
+              direction: "top",
+              multiplicator_layers: "1.4",
+              tilt: "10",
+              disable_on_mobile: "off",
+            },
+            parallax: {
+              type: "scroll",
+              origo: "slidercenter",
+              speed: 400,
+              levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 55],
+            },
+            shadow: 0,
+            spinner: "off",
+            stopLoop: 'off',
+            stopAfterLoops: -1,
+            stopAtSlide: -1,
+            shuffle: "off",
+            autoHeight: "off",
+            fullScreenAutoWidth: "off",
+            fullScreenAlignForce: "off",
+            fullScreenOffsetContainer: "",
+            fullScreenOffset: "0px",
+            hideThumbsOnMobile: "off",
+            hideSliderAtLimit: 0,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            debugMode: false,
+            fallbacks: {
+              simplifyAll: "off",
+              nextSlideOnWindowFocus: "off",
+              disableFocusListener: false,
+            }
+          });
+        }
+
+        RsTypewriterAddOn(tpj, revapi1014);
+      });
+    </script>
+  </body>
+</html>

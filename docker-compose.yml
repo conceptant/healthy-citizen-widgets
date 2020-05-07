@@ -8,16 +8,12 @@ services:
     volumes:
       - /data/logs:/var/logs/hc
       - /data/www:/adp-backend-v5/model/public
-    environment:
-      - APP_SERVER_URL="https://hc.preprod.fda.gov"
-      - DB_SERVER=db
-      - EPIC_CLIENT_ID="specify-for-each-installation"
-      - APP_ID="specify-for-each-installation"
-      - DEFAULT_HC_ALGORITHM="openfda"
-      - REDIS_URL="redis://redis:6379"
+    env_file:
+      - .env
     links:
       - db
       - redis
+
   db:
     restart: unless-stopped
     image: mongo:4.2
@@ -26,8 +22,17 @@ services:
       - "27017"
     volumes:
       - /data/db:/data/db
+
   redis:
     restart: unless-stopped
     image: redis:5.0
     ports:
       - "6379"
+
+  nginx:
+    image: nginx:1.17
+    restart: unless-stopped
+    ports:
+      - 8080
+    volumes:
+      - /data/nginx/nginx.conf:/etc/nginx/nginx.conf

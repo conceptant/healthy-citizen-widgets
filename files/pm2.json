@@ -4,7 +4,7 @@
       "name": "hc",
       "script": "app.js",
       "watch": false,
-      "cwd": "/adp-backend-v5",
+      "cwd": "/hc/adp-backend-v5",
       "env": {
       },
       "exec_mode": "cluster_mode",
